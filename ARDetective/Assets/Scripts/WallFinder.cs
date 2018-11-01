@@ -7,7 +7,7 @@ namespace ARDetective {
     public class WallFinder : MonoBehavior
     {
 		public const float precision = 0.1;
-		public List<Plane> allPlanes = populatePlanes();
+        public List<Plane> allPlanes;// = populatePlanes();
 		public List<Plane> wallPlanes;
 		public List<Plane> obstaclePlanes;
 		
@@ -40,9 +40,11 @@ namespace ARDetective {
 			
 		}
 		
-		public void update(){
+		public void Update(){
 			
 		}
+
+        public static void main() { }
 	}
 	
 }
