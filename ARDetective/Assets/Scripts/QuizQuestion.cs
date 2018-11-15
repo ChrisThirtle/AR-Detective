@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuizQuestion : MonoBehaviour {
+public class QuizQuestion 
+{
    
     public string QuestionStr { get; set; }     // Holds the question
     public Answer[] Answers { get; set; }       // Array that holds 4 answers and their ratings
