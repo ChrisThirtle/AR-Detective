@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/investigationScene.unity
     guid: 74b0676762e9f784aa5c586625611df2
-  - enabled: 1
-    path: Assets/Scenes/QuestionMode.unity
-    guid: 0fd0e6f7052ee4a059d8d2dc7aa4e695
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

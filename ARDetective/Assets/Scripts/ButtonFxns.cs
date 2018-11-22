@@ -7,41 +7,54 @@ using UnityEngine.UI;
 /// Generic functions for buttons in one place for ease of reuse.
 /// </summary>
 public class ButtonFxns: MonoBehaviour {
-    [Tooltip("The text object belonging to the button that toggles the menu's visibility")]
-    public Text showHideBtn; 
+    [Tooltip("The text component *belonging to the button* that toggles the menu's visibility")]
+    public Text showHideBtn;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private Canvas parent;
+
+    void Start()
+    {
+        parent = this.transform.parent.gameObject.GetComponent<Canvas>();
+
+    }
 
     public void ExitGame()
     {
-        //need to make this a prompt to quit instead
         Application.Quit();
     }
 
-    private bool isHidden;
+    private bool isHidden = false;
+    private RectTransform rectT;
     public void ShowOrHideMenu(GameObject menuPanel)
     {
-        RectTransform t = menuPanel.transform as RectTransform;
-        if (!isHidden)
+        rectT = menuPanel.GetComponent<RectTransform>();
+        StopAllCoroutines();
+        StartCoroutine("translate", !isHidden);
+    }
+
+    IEnumerator translate(bool willHide)
+    {
+        float translationStep = Screen.width * 0.01f; //s.t. the speed is the same across devices
+        if (willHide)
         {
-            menuPanel.transform.Translate(-t.rect.width,0f,0f);
+            //right edge of rect, scaled
+            while (rectT.localPosition.x + rectT.rect.width > 0)
+            {
+                rectT.Translate(-translationStep, 0f,0f);
+                yield return new WaitForSecondsRealtime(0.05f);
+            }
             isHidden = true;
-            showHideBtn.text = "<i>>></i>";// >>
         }
         else
-        {
-            menuPanel.transform.Translate(t.rect.width, 0f, 0f);
+        {   //left edge
+            while (rectT.localPosition.x < 0)
+            {
+                rectT.Translate(translationStep, 0f, 0f);
+                yield return new WaitForSecondsRealtime(0.05f);
+            }
             isHidden = false;
-            showHideBtn.text = "<i><<</i>";// <<
         }
-        
+
+        showHideBtn.text = isHidden ? "<i>>></i>" : "<i><<</i>";
     }
 }

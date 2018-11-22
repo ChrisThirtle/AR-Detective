@@ -5,7 +5,7 @@ using GoogleARCore;
 
 /// <summary>
 /// Handles ARCore session state tracking, and user interaction with AR scene.
-/// CodelabUtils is a Google-provided script that takes care of showing popups on Android 
+/// CodelabUtils is a Google-provided script that takes care of showing system popups on Android 
 /// </summary>
 public class ARCoreController : MonoBehaviour {
 
