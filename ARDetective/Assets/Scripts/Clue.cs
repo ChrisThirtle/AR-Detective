@@ -24,4 +24,21 @@ public class Clue : MonoBehaviour {
 	void Update () {
 		
 	}
+	
+    void OnMouseDown()
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider != null)
+            {
+                hit.collider.enabled = false;
+                // transform hiding place into object item
+                GlobalVars.Instance.CollectedClues.Add(this);
+                Destroy(this.gameObject);
+            }
+        }
+    }
 }
