@@ -17,11 +17,8 @@ public sealed class GlobalVars
             return instance;
         }
     }
-
-    enum gender {MALE, FEMALE}
-
-    private string[] maleNames = {"Edward", "Lenny", "Chris", "Toby", "Evan", "Kevin", "Raphael", "Reid", "Buddy", "Michael", "Regan", "Tristan", "Leighton"};
-    private string[] femaleNames = {"Anya ", "Lauren ", "Erika ", "Renee", "Emmeline ", "Cora ", "Margot ", "Faith ", "Amelie", "Paisley"};
+    
+    private string[] firstNames = {"Edward", "Lenny", "Chris", "Toby", "Evan", "Kevin", "Raphael", "Reid", "Buddy", "Michael", "Regan", "Tristan", "Leighton", "Anya ", "Lauren ", "Erika ", "Renee", "Emmeline ", "Cora ", "Margot ", "Faith ", "Amelie", "Paisley"};
     private string[] lastNames = {"Wilkinson", "Baker", "Green", "Porter", "Gray", "Dean", "Adams", "Howard", "Miller", "Murray", "Hughes", "Parker", "Bell", "Webb", "Rees", "Knight", "Reynolds", "Mccarthy"};
 
     public Person victim;
@@ -39,43 +36,18 @@ public sealed class GlobalVars
         //Create a victim
 
         //Male 0, Female 1
-        int vicGender = rng.Next() % 2;
-        if(vicGender == gender.FEMALE) {
-            victim = new Person(femaleNames[rng.Next(femaleNames.Length)],
-                               lastNames[rng.Next(lastNames.Length)],
-                               gender.FEMALE);
-        }
-        else {
-            victim = new Person(maleNames[rng.Next(maleNames.Length)],
-                               lastNames[rng.Next(lastNames.Length)],
-                               gender.MALE);
-        }
+        victim = new Person(firstNames[rng.Next(firstNames.Length)],
+                            lastNames[rng.Next(lastNames.Length)]);
 
         //Fill up the suspect list with named entities, using 3 suspects for this version
         //List is structured as "spouse", "lover", "friend".
         //Simplifying to set gender ratios, every run has 2 males and 2 females, not dealing with any controversy
         murdererIndex = rng.Next(3);
-        if (vicGender == gender.FEMALE) {
-            suspects.Add(new Person(maleNames[rng.Next(maleNames.Length)],
-                                     lastNames[rng.Next(lastNames.Length)],
-                                     gender.MALE));
-            suspects.Add(new Person(maleNames[rng.Next(maleNames.Length)],
-                                     lastNames[rng.Next(lastNames.Length)],
-                                     gender.MALE));
-            suspects.Add(new Person(femaleNames[rng.Next(femaleNames.Length)],
-                                     lastNames[rng.Next(lastNames.Length)],
-                                     gender.FEMALE));
-        }
-        else {
-            suspects.Add(new Person(femaleNames[rng.Next(femaleNames.Length)],
-                                     lastNames[rng.Next(lastNames.Length)],
-                                     gender.FEMALE));
-            suspects.Add(new Person(maleNames[rng.Next(maleNames.Length)],
-                                     lastNames[rng.Next(lastNames.Length)],
-                                     gender.FEMALE));
-            suspects.Add(new Person(maleNames[rng.Next(maleNames.Length)],
-                                     lastNames[rng.Next(lastNames.Length)],
-                                     gender.MALE));
-        }
+        suspects.Add(new Person(firstNames[rng.Next(firstNames.Length)],
+                                 lastNames[rng.Next(lastNames.Length)]);
+        suspects.Add(new Person(firstNames[rng.Next(firstNames.Length)],
+                                 lastNames[rng.Next(lastNames.Length)]);
+        suspects.Add(new Person(firstNames[rng.Next(firstNames.Length)],
+                                 lastNames[rng.Next(lastNames.Length)]);
     }
 }
