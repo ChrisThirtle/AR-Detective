@@ -8,7 +8,9 @@ using UnityEngine;
 public class Clue : MonoBehaviour {
     [Range(0f, 1f),Tooltip("The relative value of a clue with respect to the investigation")]
     public float weight;
-    [Tooltip("needed as an internal identifier s.t. we dont have to rename imported GameObjects.")]//this shows a message when you hover over the variable in Unity Inspector, can double as comments
+    [Tooltip("Identifies which suspect index is associated with this clue; 0=spouse, 1=lover, 2=friend")]
+    public int susIndex;
+    [Tooltip("Needed as an internal identifier s.t. we dont have to rename imported GameObjects.")]//this shows a message when you hover over the variable in Unity Inspector, can double as comments
     public string clueName;
 
     /*public vars are modifiable in Unity's Inspector window, private vars need to be explicitly marked [SerializeField]
