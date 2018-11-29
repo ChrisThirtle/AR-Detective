@@ -16,7 +16,7 @@ public class PopulateQuestion : MonoBehaviour
     public static IDictionary<int, QuizQuestion> QuizQuestionDict = null;  // generate the dictionary
     public QuizQuestion CurrentQuestion;
     public float[] AnswerRatings = null;
-    public int[] CluesFound = {0,1,3,5,6};
+    private int[] CluesFound = {0,1,3,5,6,2,4,7};
     public int ClueIndex = 0;
     public TextAsset Answers = null;
     public TextAsset Questions = null;

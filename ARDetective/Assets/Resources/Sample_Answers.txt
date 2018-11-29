@@ -1,0 +1,64 @@
+﻿This is answer 1 of 4 to question 1 item 1
+.25
+This is answer 2 of 4 to question 1 item 1
+.5
+This is answer 3 of 4 to question 1 item 1
+.75
+This is answer 4 of 4 to question 1 item 1
+1
+This is answer 1 of 4 to question 2 item 1
+.25
+This is answer 2 of 4 to question 2 item 1
+.5
+This is answer 3 of 4 to question 2 item 1
+.75
+This is answer 4 of 4 to question 2 item 1
+1
+This is answer 1 of 4 to question 1 item 2
+.25
+This is answer 2 of 4 to question 1 item 2
+.5
+This is answer 3 of 4 to question 1 item 2
+.75
+This is answer 4 of 4 to question 1 item 2
+1
+This is answer 1 of 4 to question 2 item 2
+.25
+This is answer 2 of 4 to question 2 item 2
+.5
+This is answer 3 of 4 to question 2 item 2
+.75
+This is answer 4 of 4 to question 2 item 2
+1
+This is answer 1 of 4 to question 1 item 3
+.25
+This is answer 2 of 4 to question 1 item 3
+.5
+This is answer 3 of 4 to question 1 item 3
+.75
+This is answer 4 of 4 to question 1 item 3
+1
+This is answer 1 of 4 to question 2 item 3
+.25
+This is answer 2 of 4 to question 2 item 3
+.5
+This is answer 3 of 4 to question 2 item 3
+.75
+This is answer 4 of 4 to question 2 item 3
+1
+This is answer 1 of 4 to question 1 item 4
+.25
+This is answer 2 of 4 to question 1 item 4
+.5
+This is answer 3 of 4 to question 1 item 4
+.75
+This is answer 4 of 4 to question 1 item 4
+1
+This is answer 1 of 4 to question 2 item 4
+.25
+This is answer 2 of 4 to question 2 item 4
+.5
+This is answer 3 of 4 to question 2 item 4
+.75
+This is answer 4 of 4 to question 2 item 4
+1

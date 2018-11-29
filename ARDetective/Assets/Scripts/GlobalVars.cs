@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
+
 public sealed class GlobalVars
 {
     //Singleton declarations, makes GlobalVars a shared singleton within the program, which is quite useful given it's meant to share information between every object
