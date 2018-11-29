@@ -40,7 +40,7 @@ public class ScrollingTextManager : MonoBehaviour
 
     IEnumerator EndCutScene()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(5f);
         GameObject CC = GameObject.Find("Cutscene_Canvas");
         
 
