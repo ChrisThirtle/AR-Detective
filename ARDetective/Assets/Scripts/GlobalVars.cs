@@ -17,19 +17,22 @@ public sealed class GlobalVars
             return instance;
         }
     }
-    
-    private string[] firstNames = {"Edward", "Lenny", "Chris", "Toby", "Evan", "Kevin", "Raphael", "Reid", "Buddy", "Michael", "Regan", "Tristan", "Leighton", "Anya ", "Lauren ", "Erika ", "Renee", "Emmeline ", "Cora ", "Margot ", "Faith ", "Amelie", "Paisley"};
+
+	public bool inInventory;
+
+	private string[] firstNames = {"Edward", "Lenny", "Chris", "Toby", "Evan", "Kevin", "Raphael", "Reid", "Buddy", "Michael", "Regan", "Tristan", "Leighton", "Anya ", "Lauren ", "Erika ", "Renee", "Emmeline ", "Cora ", "Margot ", "Faith ", "Amelie", "Paisley"};
     private string[] lastNames = {"Wilkinson", "Baker", "Green", "Porter", "Gray", "Dean", "Adams", "Howard", "Miller", "Murray", "Hughes", "Parker", "Bell", "Webb", "Rees", "Knight", "Reynolds", "Mccarthy"};
 
     public Person victim;
-    public List<Person> suspects = new List<Suspect>();
+    public List<Person> suspects = new List<Person>();
     public int murdererIndex;
 
     public List<Clue> CollectedClues = new List<Clue>();
+	public int quizScore = 0;
 
-    public setupVars()
+    public void setupVars()
     {
-        Random rng = new Random();
+        System.Random rng = new System.Random();
         //Make sure list of clues is empty
         CollectedClues.RemoveRange(0, CollectedClues.Count);
 
@@ -44,10 +47,20 @@ public sealed class GlobalVars
         //Simplifying to set gender ratios, every run has 2 males and 2 females, not dealing with any controversy
         murdererIndex = rng.Next(3);
         suspects.Add(new Person(firstNames[rng.Next(firstNames.Length)],
-                                 lastNames[rng.Next(lastNames.Length)]);
+                                 lastNames[rng.Next(lastNames.Length)]));
         suspects.Add(new Person(firstNames[rng.Next(firstNames.Length)],
-                                 lastNames[rng.Next(lastNames.Length)]);
+                                 lastNames[rng.Next(lastNames.Length)]));
         suspects.Add(new Person(firstNames[rng.Next(firstNames.Length)],
-                                 lastNames[rng.Next(lastNames.Length)]);
+                                 lastNames[rng.Next(lastNames.Length)]));
     }
+
+	public float getClueTotal()
+	{
+		float totalVal = 0;
+		foreach (Clue clue in CollectedClues)
+		{
+			totalVal += clue.weight;
+		}
+		return totalVal;
+	}
 }

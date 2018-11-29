@@ -10,22 +10,22 @@ public class Clue : MonoBehaviour {
     public float weight;
     [Tooltip("Identifies which suspect index is associated with this clue; 0=spouse, 1=lover, 2=friend")]
     public int susIndex;
-    [Tooltip("Needed as an internal identifier s.t. we dont have to rename imported GameObjects.")]//this shows a message when you hover over the variable in Unity Inspector, can double as comments
-    public string clueName;
+    [Tooltip("Description format string")]//this shows a message when you hover over the variable in Unity Inspector, can double as comments
+    public string description;
 
-    /*public vars are modifiable in Unity's Inspector window, private vars need to be explicitly marked [SerializeField]
+	public GameObject model;
+
+	/*public vars are modifiable in Unity's Inspector window, private vars need to be explicitly marked [SerializeField]
       if you want to change them via inspector. Use [System.Nonserialized] to hide public vars from Inspector.
       The [Range(min,max)] tag limits a value sent in via Unity to the specified range. Just use a property if you need it clamped internally as well.*/
 
 	// Use this for initialization, If a class doesn't need Unity methods like these, we should uninherit from MonoBehaviour to save on overhead.
-	void Start () {
-		
+	void Start() {
+		model = this.gameObject;
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update() { }
 	
     void OnMouseDown()
     {
@@ -37,9 +37,12 @@ public class Clue : MonoBehaviour {
             if (hit.collider != null)
             {
                 hit.collider.enabled = false;
-                // transform hiding place into object item
-                GlobalVars.Instance.CollectedClues.Add(this);
-                Destroy(this.gameObject);
+				// transform hiding place into object item
+				if (!GlobalVars.Instance.inInventory)
+				{
+					GlobalVars.Instance.CollectedClues.Add(this);
+					Destroy(this.gameObject);
+				}
             }
         }
     }
