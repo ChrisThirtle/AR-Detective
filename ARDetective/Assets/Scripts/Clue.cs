@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 /// <summary>
 /// This script is to be attached to any GameObject
 /// that is considered a "clue" i.e. a 3D model of a murder weapon.
@@ -12,6 +13,7 @@ public class Clue : MonoBehaviour {
     public int susIndex;
     [Tooltip("Description format string")]//this shows a message when you hover over the variable in Unity Inspector, can double as comments
     public string description;
+    public Sprite thumbnail;
 
 	public GameObject model;
 
