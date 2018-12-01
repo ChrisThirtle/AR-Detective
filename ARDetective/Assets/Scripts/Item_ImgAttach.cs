@@ -7,7 +7,9 @@ public class Item_ImgAttach : MonoBehaviour {
 
     private List<Image> clueThumbnails = new List<Image>();
     private int num_clues;
-    
+    public GameObject item_cnvs;
+    public GameObject prefab_cam;
+
     void Start()
     {
         clueThumbnails.AddRange(GetComponentsInChildren<Image>() );
@@ -18,5 +20,18 @@ public class Item_ImgAttach : MonoBehaviour {
         clueThumbnails[num_clues].gameObject.SetActive(true);
     }
 
+    public void Pop_Prefab()
+    {
+        item_cnvs.SetActive(false);
+        prefab_cam.SetActive(true);
+
+
+    }
+
+    public void BackToImgCanvas()
+    {
+        prefab_cam.SetActive(false);
+        item_cnvs.SetActive(true);
+    }
 
 }

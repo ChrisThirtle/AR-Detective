@@ -30,7 +30,7 @@ public class ScrollingTextManager : MonoBehaviour
         {
 
 
-            scrollImg.position += new Vector3(0f,3f, 0f);
+            scrollImg.position += new Vector3(0f,10f, 0f);
 
 
 
@@ -40,7 +40,7 @@ public class ScrollingTextManager : MonoBehaviour
 
     IEnumerator EndCutScene()
     {
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(.1f);
         GameObject CC = GameObject.Find("Cutscene_Canvas");
         
 

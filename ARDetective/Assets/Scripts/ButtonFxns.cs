@@ -15,7 +15,6 @@ public class ButtonFxns: MonoBehaviour {
     void Start()
     {
         parent = this.transform.parent.gameObject.GetComponent<Canvas>();
-
     }
 
     public void ExitGame()
