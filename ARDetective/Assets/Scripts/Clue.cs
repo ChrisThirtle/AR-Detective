@@ -15,15 +15,13 @@ public class Clue : MonoBehaviour {
     public string description;
     public Sprite thumbnail;
 
-	public GameObject model;
-
 	/*public vars are modifiable in Unity's Inspector window, private vars need to be explicitly marked [SerializeField]
       if you want to change them via inspector. Use [System.Nonserialized] to hide public vars from Inspector.
       The [Range(min,max)] tag limits a value sent in via Unity to the specified range. Just use a property if you need it clamped internally as well.*/
 
 	// Use this for initialization, If a class doesn't need Unity methods like these, we should uninherit from MonoBehaviour to save on overhead.
 	void Start() {
-		model = this.gameObject;
+	
 	}
 
 	// Update is called once per frame
@@ -42,8 +40,8 @@ public class Clue : MonoBehaviour {
 				// transform hiding place into object item
 				if (!GlobalVars.Instance.inInventory)
 				{
-					GlobalVars.Instance.CollectedClues.Add(this);
-					Destroy(this.gameObject);
+					GlobalVars.Instance.CollectedClues.Add(this.gameObject);
+					this.gameObject.SetActive(false);
 				}
             }
         }

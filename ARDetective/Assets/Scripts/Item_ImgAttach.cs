@@ -7,31 +7,46 @@ public class Item_ImgAttach : MonoBehaviour {
 
     private List<Image> clueThumbnails = new List<Image>();
     private int num_clues;
-    public GameObject item_cnvs;
+	private GameObject currClue;
+	public GameObject item_cnvs;
     public GameObject prefab_cam;
-
+	public Text invDescription;
+	
     void Start()
     {
         clueThumbnails.AddRange(GetComponentsInChildren<Image>() );
-    }
+	}
     public void Add_Img( Clue c)
     {
         clueThumbnails[num_clues].sprite = c.thumbnail;
         clueThumbnails[num_clues].gameObject.SetActive(true);
     }
 
-    public void Pop_Prefab()
+    public void Pop_Prefab(int index)
     {
+		GlobalVars.Instance.inInventory = true;
         item_cnvs.SetActive(false);
         prefab_cam.SetActive(true);
-
-
-    }
+		foreach (GameObject clue in GlobalVars.Instance.CollectedClues)
+		{
+			clue.transform.SetParent(prefab_cam.transform);
+			clue.transform.localPosition = new Vector3(0, 0, 100);
+		}
+		if (index < GlobalVars.Instance.CollectedClues.Count)
+		{
+			currClue = GlobalVars.Instance.CollectedClues[index];
+			currClue.SetActive(true);
+			invDescription.text = string.Format(currClue.GetComponent<Clue>().description,
+									GlobalVars.Instance.suspects[GlobalVars.Instance.murdererIndex]);
+		}
+	}
 
     public void BackToImgCanvas()
     {
-        prefab_cam.SetActive(false);
+		GlobalVars.Instance.inInventory = false;
+		prefab_cam.SetActive(false);
         item_cnvs.SetActive(true);
+		currClue.SetActive(false);
     }
 
 }

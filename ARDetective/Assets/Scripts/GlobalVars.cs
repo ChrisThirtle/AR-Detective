@@ -18,8 +18,7 @@ public sealed class GlobalVars
             return instance;
         }
     }
-
-	public bool inInventory;
+	
 
 	private string[] firstNames = {"Edward", "Lenny", "Chris", "Toby", "Evan", "Kevin", "Raphael", "Reid", "Buddy", "Michael", "Regan", "Tristan", "Leighton", "Anya ", "Lauren ", "Erika ", "Renee", "Emmeline ", "Cora ", "Margot ", "Faith ", "Amelie", "Paisley"};
     private string[] lastNames = {"Wilkinson", "Baker", "Green", "Porter", "Gray", "Dean", "Adams", "Howard", "Miller", "Murray", "Hughes", "Parker", "Bell", "Webb", "Rees", "Knight", "Reynolds", "Mccarthy"};
@@ -28,7 +27,8 @@ public sealed class GlobalVars
     public List<Person> suspects = new List<Person>();
     public int murdererIndex;
 
-    public List<Clue> CollectedClues = new List<Clue>();
+	public bool inInventory = false;
+    public List<GameObject> CollectedClues = new List<GameObject>();
 	public int quizScore = 0;
 
     public void setupVars()
@@ -58,9 +58,9 @@ public sealed class GlobalVars
 	public float getClueTotal()
 	{
 		float totalVal = 0;
-		foreach (Clue clue in CollectedClues)
+		foreach (GameObject clue in CollectedClues)
 		{
-			totalVal += clue.weight;
+			totalVal += clue.GetComponent<Clue>().weight;
 		}
 		return totalVal;
 	}
