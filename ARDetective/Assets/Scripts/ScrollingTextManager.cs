@@ -22,7 +22,7 @@ public class ScrollingTextManager : MonoBehaviour
     IEnumerator ScrollUpdate() {
         while (scrollImg.localPosition.y <= 968f)
         {
-            scrollImg.transform.localPosition += new Vector3(0f,stepsize,0f);
+            scrollImg.transform.localPosition += new Vector3(0f,stepsize*10,0f);
 
             yield return new WaitForSecondsRealtime(.13f);
         }

@@ -26,9 +26,11 @@ public class HidingPlace : MonoBehaviour {
         {
             if (hit.collider != null)
             {
+
                 hit.collider.enabled = false;
                 // transform hiding place into object item
                 GameObject hiding_object = (GameObject)Instantiate(clueModel.gameObject, this.transform.position, this.transform.rotation);
+                this.transform.localScale = new Vector3(.25f, .25f, .25f);
                 this.gameObject.SetActive(false);
             }
         }
