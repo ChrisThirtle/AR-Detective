@@ -19,7 +19,7 @@ public class Clue : MonoBehaviour {
 
 	// Use this for initialization, If a class doesn't need Unity methods like these, we should uninherit from MonoBehaviour to save on overhead.
 	void Start() {
-	
+        this.gameObject.AddComponent<BoxCollider>();
 	}
 
 	// Update is called once per frame
@@ -43,5 +43,6 @@ public class Clue : MonoBehaviour {
 				}
             }
         }
+        Item_ImgAttach.instance.Add_Img(this);
     }
 }

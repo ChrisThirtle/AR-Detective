@@ -11,15 +11,19 @@ public class Item_ImgAttach : MonoBehaviour {
 	public GameObject item_cnvs;
     public GameObject prefab_cam;
 	public Text invDescription;
+    public static Item_ImgAttach instance;
 	
     void Start()
     {
         clueThumbnails.AddRange(GetComponentsInChildren<Image>() );
+        instance = this;
 	}
     public void Add_Img( Clue c)
     {
         clueThumbnails[num_clues].sprite = c.thumbnail;
         clueThumbnails[num_clues].gameObject.SetActive(true);
+        currClue.SetActive(false);
+
     }
 
     public void Pop_Prefab(int index)
@@ -47,5 +51,6 @@ public class Item_ImgAttach : MonoBehaviour {
         item_cnvs.SetActive(true);
 		currClue.SetActive(false);
     }
+
 
 }
