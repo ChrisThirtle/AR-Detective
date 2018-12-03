@@ -9,8 +9,6 @@ using UnityEngine.UI;
 public class Clue : MonoBehaviour {
     [Range(0f, 1f),Tooltip("The relative value of a clue with respect to the investigation")]
     public float weight;
-    [Tooltip("Identifies which suspect index is associated with this clue; 0=spouse, 1=lover, 2=friend")]
-    public int susIndex;
     [Tooltip("Description format string")]//this shows a message when you hover over the variable in Unity Inspector, can double as comments
     public string description;
     public Sprite thumbnail;

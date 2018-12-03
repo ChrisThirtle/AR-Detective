@@ -198,6 +198,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
-  description: 
+  description: '{4}''s favorite brand of deodorant. Weird.'
   thumbnail: {fileID: 0}
