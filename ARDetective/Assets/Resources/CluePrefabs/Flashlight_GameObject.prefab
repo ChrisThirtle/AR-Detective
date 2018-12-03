@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 470116}
-  - component: {fileID: 114615755909238850}
+  - component: {fileID: 114808584267507384}
   m_Layer: 0
   m_Name: Flashlight_GameObject
   m_TagString: Untagged
@@ -334,7 +334,7 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132238}
   m_IsPrefabAsset: 1
---- !u!114 &114615755909238850
+--- !u!114 &114808584267507384
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

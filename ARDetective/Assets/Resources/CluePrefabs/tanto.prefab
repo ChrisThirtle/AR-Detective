@@ -10,7 +10,7 @@ GameObject:
   - component: {fileID: 428054}
   - component: {fileID: 3369136}
   - component: {fileID: 2383934}
-  - component: {fileID: 114014726375884032}
+  - component: {fileID: 114910593218801410}
   m_Layer: 0
   m_Name: tanto
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 165108}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,7 +84,7 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 165108}
   m_IsPrefabAsset: 1
---- !u!114 &114014726375884032
+--- !u!114 &114910593218801410
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
