@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
+  - component: {fileID: 114173752611987294}
   m_Layer: 0
   m_Name: book_0001d
   m_TagString: Untagged
@@ -83,3 +84,19 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabAsset: 1
+--- !u!114 &114173752611987294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  susIndex: 0
+  description: There's a sheet of paper slipped into this book. It has a few letters
+    in it...{4:0}{4:1}{4:2}
+  thumbnail: {fileID: 0}

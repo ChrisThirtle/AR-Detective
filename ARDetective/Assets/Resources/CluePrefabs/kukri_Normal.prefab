@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4628900024973940}
   - component: {fileID: 33934806812340982}
   - component: {fileID: 23944767153952964}
+  - component: {fileID: 114384142857369488}
   m_Layer: 0
   m_Name: kukri_Normal
   m_TagString: Untagged
@@ -83,3 +84,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137410076663698}
   m_Mesh: {fileID: 4300000, guid: bb8661d788e05744d95509dfa361e0a0, type: 3}
+--- !u!114 &114384142857369488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1137410076663698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  susIndex: 0
+  description: A pretty nasty knife. {2} says it's their knife but they didn't do
+    it.
+  thumbnail: {fileID: 0}

@@ -36,8 +36,7 @@ public class Item_ImgAttach : MonoBehaviour {
 		{
 			currClue = GlobalVars.Instance.CollectedClues[index];
 			currClue.SetActive(true);
-			invDescription.text = string.Format(currClue.GetComponent<Clue>().description,
-									GlobalVars.Instance.suspects[GlobalVars.Instance.murdererIndex]);
+			invDescription.text = GlobalVars.nameReplace(currClue.GetComponent<Clue>().description);
 		}
 	}
 
