@@ -97,6 +97,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
-  description: 
+  description: A phone, it seems to have been owned by {4}.
   thumbnail: {fileID: 0}
