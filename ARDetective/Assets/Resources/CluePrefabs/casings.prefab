@@ -465,6 +465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4923508862834660}
+  - component: {fileID: 114299606032681452}
   m_Layer: 0
   m_Name: casings
   m_TagString: Untagged
@@ -2385,7 +2386,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: 
   thumbnail: {fileID: 0}
 --- !u!114 &114221113916369184
@@ -2400,9 +2400,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: 
   thumbnail: {fileID: 0}
+--- !u!114 &114299606032681452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682830245150346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  description: 
+  thumbnail: {fileID: 21300000, guid: b2a78f7e191877f449c537a48f6ded31, type: 3}
 --- !u!114 &114453360131983260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2415,7 +2428,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: 
   thumbnail: {fileID: 0}
 --- !u!114 &114507891937436782
@@ -2430,7 +2442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: 
   thumbnail: {fileID: 0}
 --- !u!114 &114619855697579594
@@ -2445,7 +2456,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: 
   thumbnail: {fileID: 0}
 --- !u!114 &114655111341210354
@@ -2460,7 +2470,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: 
   thumbnail: {fileID: 0}
 --- !u!114 &114922792932600000
@@ -2475,7 +2484,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: 
   thumbnail: {fileID: 0}
 --- !u!114 &114959813810918636
@@ -2490,7 +2498,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: 
   thumbnail: {fileID: 0}
 --- !u!114 &114982994732756360
@@ -2505,6 +2512,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: 
   thumbnail: {fileID: 0}

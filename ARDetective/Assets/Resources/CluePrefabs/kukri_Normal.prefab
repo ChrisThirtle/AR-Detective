@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: A pretty nasty knife. {2} says it's their knife but they didn't do
     it.
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: 5c75e2b20a8cf6c4591dd99ea645228e, type: 3}

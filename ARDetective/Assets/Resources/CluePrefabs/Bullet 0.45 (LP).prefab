@@ -467,6 +467,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: 
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: b2a78f7e191877f449c537a48f6ded31, type: 3}

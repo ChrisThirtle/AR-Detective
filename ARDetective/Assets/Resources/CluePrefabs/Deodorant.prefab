@@ -199,4 +199,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   description: '{4}''s favorite brand of deodorant. Weird.'
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: 791d9f77444ac514fba63af018b5bc3f, type: 3}

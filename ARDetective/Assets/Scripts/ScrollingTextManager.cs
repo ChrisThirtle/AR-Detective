@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine.EventSystems;
+using Vuforia;
 
 public class ScrollingTextManager : MonoBehaviour
 {
@@ -16,12 +16,14 @@ public class ScrollingTextManager : MonoBehaviour
     public GameObject other_canvas;
     private string sourceText;
     private string tempText;
+    public GameObject ARCam;
 
     void Start()
     {
         stepsize = Screen.height*0.01f * scrollSpeed;
 		textTarget.text = GlobalVars.nameReplace(textTarget.text);
 		scroller.verticalScrollbar.value= 0.5f;
+
 	}
 	void Update()
 	{
@@ -57,8 +59,7 @@ public class ScrollingTextManager : MonoBehaviour
         
     
         CC.SetActive(false);
-        FindObjectOfType<EventSystem>().gameObject.SetActive(true);
-
+        ARCam.SetActive(true);
     }
     // Use this for initialization
 

@@ -98,4 +98,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   description: A phone, it seems to have been owned by {4}.
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: 3410cc5c906c74747898f200af4b956b, type: 3}

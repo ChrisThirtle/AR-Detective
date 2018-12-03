@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  susIndex: 0
   description: There's a sheet of paper slipped into this book. It has a few letters
     in it...{4:0}{4:1}{4:2}
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: 2b26360ac2ccfce43aa002c13e89a10a, type: 3}

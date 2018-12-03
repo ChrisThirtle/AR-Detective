@@ -229,4 +229,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   description: Food stains, fingerprints from {4}
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: 9afd60d10b4682248ba163724d8d6f1a, type: 3}
