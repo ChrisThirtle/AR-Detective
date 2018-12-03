@@ -3981,7 +3981,7 @@ MonoBehaviour:
   OnContentPlaced:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2095207206}
         m_MethodName: placeContent
         m_Mode: 1
         m_Arguments:
@@ -4707,7 +4707,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2095207209}
   - component: {fileID: 2095207208}
-  - component: {fileID: 2095207207}
   - component: {fileID: 2095207206}
   m_Layer: 0
   m_Name: Ground Plane Stage
@@ -4725,17 +4724,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec0f7bbb43812dc498e938ea878d9c53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2095207207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2095207205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2095207208
