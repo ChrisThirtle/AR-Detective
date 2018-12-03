@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 431172}
+  - component: {fileID: 114461127920288878}
   m_Layer: 0
   m_Name: HeavyWrench02
   m_TagString: Untagged
@@ -258,3 +259,19 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 146926}
   m_IsPrefabAsset: 1
+--- !u!114 &114461127920288878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  susIndex: 0
+  description: A weapon. With {0}'s blood on the head. {4}'s fingerprints are all
+    over this one.
+  thumbnail: {fileID: 0}

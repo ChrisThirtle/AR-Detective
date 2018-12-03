@@ -3374,6 +3374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51d55411fee13145abd08e69ca6f367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1 &1526826834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3491,6 +3492,7 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1526826834}
   m_CullTransparentMesh: 0
+=======
   dbug: {fileID: 0}
   cam: {fileID: 0}
   lr: {fileID: 1495533878}
@@ -3586,6 +3588,7 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 1
+>>>>>>> master
 --- !u!1001 &1567155705
 Prefab:
   m_ObjectHideFlags: 0
