@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4497012157758718}
-  - component: {fileID: 205680424299751440}
+  - component: {fileID: 114883532066535194}
   m_Layer: 0
   m_Name: Dish_Original
   m_TagString: Untagged
@@ -216,24 +216,18 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 4432e88e2c7910f46aba45d2dd9ed49b, type: 3}
---- !u!205 &205680424299751440
-LODGroup:
+--- !u!114 &114883532066535194
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1134634293712184}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0, y: 0.0017887345, z: 0}
-  m_Size: 0.19506118
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LODs:
-  - screenRelativeHeight: 0.42807582
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23779907259035032}
-  - screenRelativeHeight: 0.07473163
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23454721011242254}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  susIndex: 0
+  description: 
+  thumbnail: {fileID: 0}

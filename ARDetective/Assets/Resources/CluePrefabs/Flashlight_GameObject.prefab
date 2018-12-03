@@ -42,6 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 470116}
+  - component: {fileID: 114808584267507384}
   m_Layer: 0
   m_Name: Flashlight_GameObject
   m_TagString: Untagged
@@ -333,3 +334,18 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132238}
   m_IsPrefabAsset: 1
+--- !u!114 &114808584267507384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  susIndex: 0
+  description: 
+  thumbnail: {fileID: 0}

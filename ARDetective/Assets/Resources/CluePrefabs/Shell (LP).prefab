@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 470694}
-  - component: {fileID: 20587918}
+  - component: {fileID: 114359169872269592}
   m_Layer: 0
   m_Name: Shell (LP)
   m_TagString: Untagged
@@ -71,15 +71,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7496958, y: 0.11706759, z: 2.0676756}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 477952}
   - {fileID: 411744}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &477952
 Transform:
   m_ObjectHideFlags: 1
@@ -213,30 +213,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!205 &20587918
-LODGroup:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111746}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.000000023748726, y: 0, z: 0.0000000018626451}
-  m_Size: 0.02196139
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LODs:
-  - screenRelativeHeight: 0.29758298
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2342116}
-  - screenRelativeHeight: 0.0011481068
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2312258}
-  - screenRelativeHeight: 0.0003378187
-    fadeTransitionWidth: 0
-    renderers: []
-  m_Enabled: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -248,3 +224,18 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 111746}
   m_IsPrefabAsset: 1
+--- !u!114 &114359169872269592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  susIndex: 0
+  description: 
+  thumbnail: {fileID: 0}
