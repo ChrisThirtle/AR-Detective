@@ -21,7 +21,6 @@ public class ScrollingTextManager : MonoBehaviour
         stepsize = Screen.height*0.01f * scrollSpeed;
 		textTarget.text = GlobalVars.nameReplace(textTarget.text);
 		scroller.verticalScrollbar.value= 0.5f;
-		//StartCoroutine("ScrollUpdate");
 	}
 	void Update()
 	{
@@ -31,7 +30,7 @@ public class ScrollingTextManager : MonoBehaviour
 			StartCoroutine("EndCutScene");
 		}
 	}
-
+	/*
     private Vector3 target = new Vector3(0f,968f,0f);
     IEnumerator ScrollUpdate() {
 		
@@ -46,6 +45,7 @@ public class ScrollingTextManager : MonoBehaviour
 		
 	}
 
+	*/
 	IEnumerator EndCutScene()
     {
         yield return new WaitForSecondsRealtime(1.5f);
