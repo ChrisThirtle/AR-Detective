@@ -38,7 +38,7 @@ public class ScrollingTextManager : MonoBehaviour
 		
 		while (scrollImg.localPosition.y <= textTarget.bounds.size.y)
         {
-            scrollImg.transform.localPosition += new Vector3(0f,stepsize,0f);
+            scrollImg.transform.localPosition += new Vector3(0f,stepsize*10,0f);
 
             yield return new WaitForSecondsRealtime(.13f);
         }

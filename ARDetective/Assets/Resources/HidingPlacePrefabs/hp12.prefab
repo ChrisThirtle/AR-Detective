@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 445052}
   - component: {fileID: 3378584}
   - component: {fileID: 2381144}
+  - component: {fileID: 65633873767674922}
   m_Layer: 0
   m_Name: hp12
   m_TagString: Untagged
@@ -83,3 +84,15 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 189024}
   m_IsPrefabAsset: 1
+--- !u!65 &65633873767674922
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189024}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.2, z: 0.90528214}
+  m_Center: {x: 0, y: -2.1175824e-22, z: -0.000000014901165}
