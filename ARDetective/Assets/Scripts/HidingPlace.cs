@@ -26,6 +26,7 @@ public class HidingPlace : MonoBehaviour {
         {
             if (hit.collider != null)
             {
+
                 hit.collider.enabled = false;
                 // transform hiding place into object item
                 this.transform.GetChild(0).gameObject.SetActive(true);

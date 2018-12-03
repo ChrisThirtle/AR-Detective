@@ -97,5 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   susIndex: 0
-  description: 
+  description: This is {0}'s journal, last entry says they had a fight with {4} a
+    few days ago.
   thumbnail: {fileID: 0}

@@ -46,7 +46,6 @@ public class ClueHider : MonoBehaviour, ITrackableEventHandler{
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
-
         hidingObjects.AddRange(Resources.LoadAll<GameObject>("HidingPlacePrefabs/"));
         clueObjects.AddRange(Resources.LoadAll<GameObject>("CluePrefabs/"));
     }
@@ -111,5 +110,4 @@ public class ClueHider : MonoBehaviour, ITrackableEventHandler{
     {
         print("tracking lost");
     }
-
 }

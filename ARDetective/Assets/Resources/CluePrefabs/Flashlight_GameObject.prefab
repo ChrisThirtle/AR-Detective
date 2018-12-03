@@ -347,5 +347,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   susIndex: 0
-  description: 
+  description: This flashlight has some of {4}'s fingerprints on it. Ominous.
   thumbnail: {fileID: 0}

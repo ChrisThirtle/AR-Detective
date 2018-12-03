@@ -126,5 +126,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   susIndex: 0
-  description: 
+  description: A magazine. Half-expended. Has a partial fingerprint on it matching
+    {4}
   thumbnail: {fileID: 0}

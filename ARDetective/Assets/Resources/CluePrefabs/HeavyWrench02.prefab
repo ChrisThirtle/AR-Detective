@@ -272,5 +272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   susIndex: 0
-  description: 
+  description: A weapon. With {0}'s blood on the head. {4}'s fingerprints are all
+    over this one.
   thumbnail: {fileID: 0}

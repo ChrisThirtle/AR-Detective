@@ -97,5 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   susIndex: 0
-  description: 
+  description: A pretty plain knife. Belongs to {2}. Has some fingerprints from {4}
+    on the handle.
   thumbnail: {fileID: 0}

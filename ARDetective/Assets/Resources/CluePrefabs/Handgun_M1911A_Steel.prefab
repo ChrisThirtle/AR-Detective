@@ -476,5 +476,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   susIndex: 0
-  description: 
+  description: A murder weapon, obviously. Fingerprints were wiped off the stock.
+    Records say it belonged to {1}.
   thumbnail: {fileID: 0}
