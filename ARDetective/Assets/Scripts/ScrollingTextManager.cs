@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class ScrollingTextManager : MonoBehaviour
 {
@@ -53,10 +54,10 @@ public class ScrollingTextManager : MonoBehaviour
         
 
         other_canvas.SetActive(true);     
-
+        
     
         CC.SetActive(false);
-
+        FindObjectOfType<EventSystem>().gameObject.SetActive(true);
 
     }
     // Use this for initialization
