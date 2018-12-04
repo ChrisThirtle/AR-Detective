@@ -12,4 +12,15 @@ public class Person {
 	public string fullName  {
 		get { return firstName + " " + lastName; }
 	}
+
+	public static bool operator ==(Person person, Person otherPerson)
+	{
+		return person.fullName == otherPerson.fullName;
+	}
+
+	public static bool operator !=(Person person, Person otherPerson)
+	{
+		return person.fullName != otherPerson.fullName;
+	}
+
 }

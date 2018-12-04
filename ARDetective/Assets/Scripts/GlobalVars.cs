@@ -44,15 +44,16 @@ public sealed class GlobalVars
                             lastNames[rng.Next(lastNames.Length)]);
 
         //Fill up the suspect list with named entities, using 3 suspects for this version
-        //List is structured as "spouse", "lover", "friend".
-        //Simplifying to set gender ratios, every run has 2 males and 2 females, not dealing with any controversy
+		//Everything is random.
         murdererIndex = rng.Next(3);
-        suspects.Add(new Person(firstNames[rng.Next(firstNames.Length)],
-                                 lastNames[rng.Next(lastNames.Length)]));
-        suspects.Add(new Person(firstNames[rng.Next(firstNames.Length)],
-                                 lastNames[rng.Next(lastNames.Length)]));
-        suspects.Add(new Person(firstNames[rng.Next(firstNames.Length)],
-                                 lastNames[rng.Next(lastNames.Length)]));
+		while(suspects.Count < 3)
+		{
+			Person nextSuspect = new Person(firstNames[rng.Next(firstNames.Length)],
+									 lastNames[rng.Next(lastNames.Length)]);
+			if (nextSuspect == victim) continue;
+			if (suspects.Contains(nextSuspect)) continue;
+			suspects.Add(nextSuspect);
+		}
     }
 
 	public static float getClueTotal()
