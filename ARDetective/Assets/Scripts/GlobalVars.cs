@@ -30,6 +30,7 @@ public sealed class GlobalVars
 	public bool inInventory = false;
     public List<GameObject> CollectedClues = new List<GameObject>();
 	public int quizScore = 0;
+	public float FinalScore;
 
     public void setupVars()
     {
