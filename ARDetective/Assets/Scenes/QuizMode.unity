@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -211,6 +211,11 @@ MonoBehaviour:
   ClueIndex: 0
   Answers: {fileID: 4900000, guid: 76b11422a1d4e41fca9ac62576460606, type: 3}
   Questions: {fileID: 4900000, guid: fa2edfb3bf6b64584ad5902e5814a981, type: 3}
+  ClueList:
+  - {fileID: 146926, guid: f93f83803e8d5bf42880c6ab4508c733, type: 2}
+  - {fileID: 158912, guid: 05fc4d742a550a049885e8aac79b49d4, type: 2}
+  - {fileID: 1191933010613832, guid: 42db2464346d91c47b812288879592f1, type: 2}
+  - {fileID: 191300, guid: 30506e06c40703349b3b014b826e1a01, type: 2}
 --- !u!1 &460006105
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,10 +294,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 310914971}
         m_MethodName: Clicked
-        m_Mode: 3
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 508719044}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
           m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
@@ -487,10 +492,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 310914971}
         m_MethodName: Clicked
-        m_Mode: 3
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1643519501}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
@@ -901,10 +906,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 310914971}
         m_MethodName: Clicked
-        m_Mode: 3
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 945190746}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1099,10 +1104,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 310914971}
         m_MethodName: Clicked
-        m_Mode: 3
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 725530739}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 

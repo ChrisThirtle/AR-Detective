@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 //using UnityEngine.
 
 public class PopulateQuestion : MonoBehaviour
@@ -13,60 +14,65 @@ public class PopulateQuestion : MonoBehaviour
     public Text AnswerFourText = null;
     public Text QuestionText = null;
     public static QuestionsGenerator QG = new QuestionsGenerator();
-    public static IDictionary<int, QuizQuestion> QuizQuestionDict = null;  // generate the dictionary
     public QuizQuestion CurrentQuestion;
-    public float[] AnswerRatings = null;
-    private int[] CluesFound = {0,1,3,5,6,2,4,7};
+    public List<float> AnswerRatings = new List<float>();
     public int ClueIndex = 0;
     public TextAsset Answers = null;
     public TextAsset Questions = null;
-
+    public List<GameObject> ClueList = new List<GameObject>();
 
     void Start()
     {
-        // Generate QuizQuestionDictionary
-        QuizQuestionDict = QG.GenerateList(Answers,Questions);
-
-        //  ReshuffleQ(ListOfQuestions);
-        AnswerRatings = new float[CluesFound.Length];
-        ReshuffleClue(CluesFound);
-        NextQuestion(ClueIndex);
+        NextQuestion();
     }
 
     void Update()
     {
+
+    }
+
+    // This method is called every time an answer is given, based on the question number asked, it will return a QuizQuestion value
+    void NextQuestion()
+    {
+        // Get QuizQuestion based on shuffled clues found
+        // index into shuffled clues and pull that key and get its value from the dictionary
+        // Get next clue from collected clue and create a question based on it
+
+        GameObject CurrentClue = GlobalVars.Instance.CollectedClues[ClueIndex];
+        //GameObject CurrentClue = ClueList[ClueIndex];
+        CurrentQuestion = QG.CreateQuestion(CurrentClue);
+        ReshuffleAnswer(CurrentQuestion.Answers);
         QuestionText.text = CurrentQuestion.QuestionStr;
         AnswerOneText.text = CurrentQuestion.Answers[0].AnswerString;
         AnswerTwoText.text = CurrentQuestion.Answers[1].AnswerString;
         AnswerThreeText.text = CurrentQuestion.Answers[2].AnswerString;
         AnswerFourText.text = CurrentQuestion.Answers[3].AnswerString;
-
+        Canvas.ForceUpdateCanvases();
     }
 
-    // This method is called every time an answer is given, based on the question number asked, it will return a QuizQuestion value
-    void NextQuestion(int ClueIndex)
+    public void Clicked(Text b)
     {
-        // Get QuizQuestion based on shuffled clues found
-        // index into shuffled clues and pull that key and get its value from the dictionary
-        QuizQuestionDict.TryGetValue(CluesFound[ClueIndex], out CurrentQuestion);
-        ReshuffleAnswer(CurrentQuestion.Answers);
+        GameObject CurrentClue = GlobalVars.Instance.CollectedClues[ClueIndex];
+        string ClueDescription = CurrentClue.GetComponent<Clue>().description;
+        ClueIndex++;
+        if (ClueDescription.Contains(b.text))  //GlobalVars.Instance.suspects[4].fullName)
+        {
+            AnswerRatings.Add(1);
+        }
+        else
+        {
+            AnswerRatings.Add(0.2f);
+        }
 
-    }
-
-    public void Clicked(int ButtonNumber)
-    {
-        AnswerRatings[ClueIndex] = CurrentQuestion.Answers[ButtonNumber].Rating;
 
         // Check if all questions asked have been answered
-        if(ClueIndex == (CluesFound.Length - 1))
+        if (ClueIndex == 4)      //(GlobalVars.Instance.CollectedClues.Count))
         {
-            CalculateAnswerRatings(this.AnswerRatings);
+            CalculateAnswerRatings();
             Destroy(this);
             return;
         }
-
-        ClueIndex++;
-        NextQuestion(ClueIndex);
+        NextQuestion();
         Canvas.ForceUpdateCanvases();
     }
 
@@ -83,25 +89,29 @@ public class PopulateQuestion : MonoBehaviour
         }
     }
 
-    void ReshuffleClue(int[] CurrentCluesSet)
-    {
-        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
-        for (int t = 0; t < CurrentCluesSet.Length; t++)
-        {
-            int tmp = CurrentCluesSet[t];
-            int r = Random.Range(t, CurrentCluesSet.Length);
-            CurrentCluesSet[t] = CluesFound[r];
-            CurrentCluesSet[r] = tmp;
-        }
-    }
-
-    void CalculateAnswerRatings(float[] AnswersRating)
+    void CalculateAnswerRatings()
     {
         float AnswersEvaluation = 0;
-        for (int i = 0; i < AnswerRatings.Length; i++)
+        for (int i = 0; i < AnswerRatings.Count; i++)
         {
             AnswersEvaluation += AnswerRatings[i];
         }
-        Debug.Log(AnswersEvaluation.ToString());
+        GlobalVars.Instance.FinalScore = AnswersEvaluation;
+        SceneManager.LoadSceneAsync("Credits");
     }
 }
+
+
+//    void ReshuffleClue(int[] CurrentCluesSet)
+//    {
+//        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
+//        for (int t = 0; t < CurrentCluesSet.Length; t++)
+//        {
+//            int tmp = CurrentCluesSet[t];
+//            int r = Random.Range(t, CurrentCluesSet.Length);
+//            CurrentCluesSet[t] = CluesFound[r];
+//            CurrentCluesSet[r] = tmp;
+//        }
+//    }
+
+

@@ -8,49 +8,89 @@ using TMPro;
 public class QuestionsGenerator
 {
 
-    private static int AmountQuestions = 8;   // var holds the total number of questions we're creating
-    private int AnswersFileIdx;        // var holds index into the answersFile array
-    public QuizQuestion[] ListOfQuestions = new QuizQuestion[AmountQuestions];   // array of class QzQuestion holds 8 questions with answers
-    public Dictionary<int, QuizQuestion> QuizQuestionDict = new Dictionary<int, QuizQuestion>();
-    // public ShuffeArray Shuffler = new ShuffeArray();
-
-// Use this for initialization
-    public IDictionary<int, QuizQuestion> GenerateList (TextAsset Answers, TextAsset Questions) 
+    public QuizQuestion CreateQuestion(GameObject clue)
     {
+        QuizQuestion question = new QuizQuestion();
+        Answer ans1 = new Answer();
+        Answer ans2 = new Answer();
+        Answer ans3 = new Answer();
+        Answer ans4 = new Answer();
 
-        string[] AnswersFile = Answers.ToString().Split('\n');
-        string[] QuestionsFile = Questions.ToString().Split('\n');
+        //The rating doesn't matter as it's calculated after button press
+        ans1.AnswerString = GlobalVars.nameReplace("{0}");
+        ans1.Rating = 0.1f;
+        ans2.AnswerString = GlobalVars.nameReplace("{1}");
+        ans2.Rating = 0.1f;
+        ans3.AnswerString = GlobalVars.nameReplace("{2}");
+        ans3.Rating = 0.1f;
+        ans4.AnswerString = GlobalVars.nameReplace("{3}");
+        ans4.Rating = 0.1f;
 
-        for (int i = 0; i < AmountQuestions; i++)     // build amount of questions entered
+
+
+        switch (clue.GetComponent<Clue>().name)
         {
-            QuizQuestion CurrentQ = new QuizQuestion();
-            CurrentQ.QuestionStr = QuestionsFile[i];
-            CurrentQ.Answers = new Answer[4];
-            AnswersFileIdx = i * 8;         // 0,8,16... each question is 8 lines of answerFile the answer on one line, rating next
-            for (int j = 0; j < 4; j++)
-            {
-                Answer Ans = new Answer
-                {
-                    AnswerString = AnswersFile[AnswersFileIdx],     // add line from file to ans property
-                    Rating = float.Parse(AnswersFile[AnswersFileIdx + 1])  // next line holds the rating
-                };      // create answer struct
-                AnswersFileIdx += 2;    // go to next answer and rating
-                CurrentQ.Answers[j] = Ans;   // save the answer to the array of the current question
-            }
-            QuizQuestionDict.Add(i, CurrentQ);  // add key-value pair to the Dictionary
+            case "Black Journal":
+                question.QuestionStr = string.Format("Who did {0} recently get in a fight with?", GlobalVars.Instance.suspects[0]);
+                break;
+            case "Bullet":
+                question.QuestionStr = "Whose prints were found on the bullet?";
+                break;
+            case "Bullets":
+                question.QuestionStr = "Whose prints were found on the bullets?";
+                break;
+            case "Casings":
+                question.QuestionStr = "Whose prints were found on the casings?";
+                break;
+            case "Deodorant":
+                question.QuestionStr = "This is whose favorite deodorant?";
+                break;
+            case "Flashlight":
+                question.QuestionStr = string.Format("This may have belonged to {0}, but whose prints were found?", GlobalVars.Instance.suspects[0]);
+                break;
+            case "Gray Plate":
+                question.QuestionStr = "Who recently used this?";
+                break;
+            case "Handgun":
+                question.QuestionStr = "There were no prints found, but who was it registered to?";
+                break;
+            case "Handgun Magazine":
+                question.QuestionStr = string.Format("The gun is registered to {0}, but who did the prints belong to?", GlobalVars.Instance.suspects[1]);
+                break;
+            case "Kukri":
+                question.QuestionStr = string.Format("Who does this belong to?");
+                break;
+            case "Navy Plate":
+                question.QuestionStr = "Whose prints are on this plate?";
+                break;
+            case "Pipe Wrench":
+                question.QuestionStr = "Whose prints are all over this pipe wrench?";
+                break;
+            case "Red Book":
+                question.QuestionStr = "Who wrote the notes on the paper in this book?";
+                break;
+            case "Shell":
+                question.QuestionStr = "Whose prints were discovered on this shell?";
+                break;
+            case "Smartphone":
+                question.QuestionStr = "To whom does this phone belong to?";
+                break;
+            case "Tanto":
+                question.QuestionStr = "Who owns this knife?";
+                break;
+            case "Unspent Round":
+                question.QuestionStr = "There were prints found on the unspent round, who do they belong to?";
+                break;
+            case "Yellow Plate":
+                question.QuestionStr = "Whose prints on this yellow plate do these belonging to?";
+                break;
         }
-        return QuizQuestionDict;
-    }
 
-    void Reshuffle(QuizQuestion[] QuestionsList)
-    {
-        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
-        for (int t = 0; t < QuestionsList.Length; t++)
-        {
-            QuizQuestion tmp = QuestionsList[t];
-            int r = Random.Range(t, QuestionsList.Length);
-            QuestionsList[t] = QuestionsList[r];
-            QuestionsList[r] = tmp;
-        }
+        question.Answers[0] = ans1;
+        question.Answers[1] = ans2;
+        question.Answers[2] = ans3;
+        question.Answers[3] = ans4;
+
+        return question;
     }
 }

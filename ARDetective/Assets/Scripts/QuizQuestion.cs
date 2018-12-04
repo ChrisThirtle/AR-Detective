@@ -6,7 +6,7 @@ public class QuizQuestion
 {
    
     public string QuestionStr { get; set; }     // Holds the question
-    public Answer[] Answers { get; set; }       // Array that holds 4 answers and their ratings
+    public Answer[] Answers = new Answer[4];//{ get; set; }       // Array that holds 4 answers and their ratings
 
     public override string ToString() // ToString function for debugging
     {
