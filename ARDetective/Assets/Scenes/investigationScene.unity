@@ -2100,7 +2100,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 944167048}
         m_MethodName: changescene
         m_Mode: 5
         m_Arguments:
@@ -2108,7 +2108,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: QuestionMode
+          m_StringArgument: QuizMode
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2159,6 +2159,7 @@ GameObject:
   - component: {fileID: 944167045}
   - component: {fileID: 944167044}
   - component: {fileID: 944167043}
+  - component: {fileID: 944167048}
   m_Layer: 0
   m_Name: ARCamera
   m_TagString: Untagged
@@ -2250,6 +2251,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &944167048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944167042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5efc3f2529c4a4da600282d5f1df27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &981548867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4756,6 +4768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0f7bbb43812dc498e938ea878d9c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quizBtn: {fileID: 909244314}
 --- !u!114 &2095207208
 MonoBehaviour:
   m_ObjectHideFlags: 0

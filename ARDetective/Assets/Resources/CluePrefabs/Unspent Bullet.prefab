@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 20541734}
   - component: {fileID: 114235308818346096}
   m_Layer: 0
-  m_Name: Bullet 0.45 (LP)
+  m_Name: Unspent Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

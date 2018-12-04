@@ -26,7 +26,14 @@ public class QuestionsGenerator
         ans4.AnswerString = GlobalVars.nameReplace("{3}");
         ans4.Rating = 0.1f;
 
-
+        //ans1.AnswerString = "This";
+        //ans1.Rating = 0.1f;
+        //ans2.AnswerString = "Better";
+        //ans2.Rating = 0.1f;
+        //ans3.AnswerString = "Show";
+        //ans3.Rating = 0.1f;
+        //ans4.AnswerString = "Up";
+        //ans4.Rating = 0.1f;
 
         switch (clue.GetComponent<Clue>().name)
         {
@@ -78,11 +85,14 @@ public class QuestionsGenerator
             case "Tanto":
                 question.QuestionStr = "Who owns this knife?";
                 break;
-            case "Unspent Round":
+            case "Unspent Bullet":
                 question.QuestionStr = "There were prints found on the unspent round, who do they belong to?";
                 break;
             case "Yellow Plate":
                 question.QuestionStr = "Whose prints on this yellow plate do these belonging to?";
+                break;
+            default:
+                question.QuestionStr = "Could not switch to item";
                 break;
         }
 

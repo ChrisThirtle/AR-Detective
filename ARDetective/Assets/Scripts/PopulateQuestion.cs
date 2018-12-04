@@ -39,7 +39,7 @@ public class PopulateQuestion : MonoBehaviour
         // Get next clue from collected clue and create a question based on it
 
         GameObject CurrentClue = GlobalVars.Instance.CollectedClues[ClueIndex];
-        //GameObject CurrentClue = ClueList[ClueIndex];
+       // GameObject CurrentClue = ClueList[ClueIndex];
         CurrentQuestion = QG.CreateQuestion(CurrentClue);
         ReshuffleAnswer(CurrentQuestion.Answers);
         QuestionText.text = CurrentQuestion.QuestionStr;
@@ -54,6 +54,7 @@ public class PopulateQuestion : MonoBehaviour
     {
         GameObject CurrentClue = GlobalVars.Instance.CollectedClues[ClueIndex];
         string ClueDescription = CurrentClue.GetComponent<Clue>().description;
+        //string ClueDescription = "This";
         ClueIndex++;
         if (ClueDescription.Contains(b.text))  //GlobalVars.Instance.suspects[4].fullName)
         {

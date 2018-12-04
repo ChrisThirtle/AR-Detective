@@ -5,9 +5,8 @@ using Vuforia;
 
 public class ClueHider : MonoBehaviour, ITrackableEventHandler{
 	static System.Random rand = new System.Random();
-
+    public GameObject quizBtn;
 	bool canPlace = false;
-
 	List<GameObject> hidingObjects = new List<GameObject>();
 	List<GameObject> clueObjects = new List<GameObject>();
 
@@ -32,6 +31,10 @@ public class ClueHider : MonoBehaviour, ITrackableEventHandler{
             randHidingPlace.transform.localPosition = new Vector3(0f,-1f,0f);
             randHidingPlace.transform.localRotation = Quaternion.identity;
             hidingplacesPlaced++;
+        }
+        else
+        {
+            quizBtn.SetActive(true);
         }
     }
 

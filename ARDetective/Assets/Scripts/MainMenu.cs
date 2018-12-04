@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour {
 
     public void changescene(string scenename)
     {
-		foreach (Clue clue in GlobalVars.Instance.CollectedClues){
+		foreach (GameObject clue in GlobalVars.Instance.CollectedClues){
 			Object.DontDestroyOnLoad(clue);
 		}
         SceneManager.LoadScene(scenename);

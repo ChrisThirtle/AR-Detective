@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4616448638409186}
-  - component: {fileID: 114707935691390558}
   m_Layer: 0
   m_Name: Bullet (LP) (2)
   m_TagString: Untagged
@@ -177,7 +176,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4419890421135682}
-  - component: {fileID: 114656203063331138}
   m_Layer: 0
   m_Name: Bullet (LP) (3)
   m_TagString: Untagged
@@ -193,7 +191,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4767578515406386}
-  - component: {fileID: 114705004800524562}
   m_Layer: 0
   m_Name: Bullet (LP) (1)
   m_TagString: Untagged
@@ -209,7 +206,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4495132207007226}
-  - component: {fileID: 114860478409697852}
   m_Layer: 0
   m_Name: Bullet (LP)
   m_TagString: Untagged
@@ -910,59 +906,3 @@ MonoBehaviour:
   weight: 0
   description: 
   thumbnail: {fileID: 21300000, guid: b2a78f7e191877f449c537a48f6ded31, type: 3}
---- !u!114 &114656203063331138
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1717876214160462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 0
-  description: 
-  thumbnail: {fileID: 0}
---- !u!114 &114705004800524562
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727533967750528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 0
-  description: 
-  thumbnail: {fileID: 0}
---- !u!114 &114707935691390558
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1049294323024164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 0
-  description: 
-  thumbnail: {fileID: 0}
---- !u!114 &114860478409697852
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1812275048956948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 0
-  description: 
-  thumbnail: {fileID: 0}

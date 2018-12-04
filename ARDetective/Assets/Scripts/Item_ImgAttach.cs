@@ -31,18 +31,11 @@ public class Item_ImgAttach : MonoBehaviour {
 
     public void Pop_Prefab(int index)
     {
-		GlobalVars.Instance.inInventory = true;
         item_cnvs.SetActive(false);
         prefab_cam.SetActive(true);
-		foreach (GameObject clue in GlobalVars.Instance.CollectedClues)
-		{
-			clue.transform.SetParent(prefab_cam.transform);
-			clue.transform.localPosition = new Vector3(0, 0, 100);
-		}
 		if (index < GlobalVars.Instance.CollectedClues.Count)
 		{
 			currClue = GlobalVars.Instance.CollectedClues[index];
-			currClue.SetActive(true);
 			invDescription.text = GlobalVars.nameReplace(currClue.GetComponent<Clue>().description);
 		}
 	}
@@ -52,7 +45,6 @@ public class Item_ImgAttach : MonoBehaviour {
 		GlobalVars.Instance.inInventory = false;
 		prefab_cam.SetActive(false);
         item_cnvs.SetActive(true);
-		currClue.SetActive(false);
     }
 
 
