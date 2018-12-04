@@ -23,11 +23,17 @@ public class Clue : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update() { }
+	void Update() {
+
+        //workaround to better debug in Unity Editor
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnMouseDown();
+        }
+    }
 	
     void OnMouseDown()
     {
-        print("clicked clue:" + name);//debug
         GlobalVars.Instance.CollectedClues.Add(this.gameObject);
         Item_ImgAttach.instance.Add_Img(this);
         this.gameObject.SetActive(false);

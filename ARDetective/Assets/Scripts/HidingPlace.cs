@@ -14,12 +14,16 @@ public class HidingPlace : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+        //workaround to better debug in Unity Editor
+        if (Input.GetKeyDown(KeyCode.Space) )
+        {
+            OnMouseDown();
+        }
 	}
 
     void OnMouseDown()
     {
-        print("clicked HP:"+name);//debug
         // transform hiding place into object item
         this.transform.GetChild(0).gameObject.SetActive(true);
         this.transform.DetachChildren();

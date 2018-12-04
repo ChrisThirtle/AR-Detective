@@ -11,18 +11,21 @@ public class Item_ImgAttach : MonoBehaviour {
 	public GameObject item_cnvs;
     public GameObject prefab_cam;
 	public Text invDescription;
+    public GameObject thumbnailGroup;
     public static Item_ImgAttach instance;
 	
-    void Awake()
+    void Start()
     {
-        clueThumbnails.AddRange(GetComponentsInChildren<Image>() );
+        clueThumbnails.AddRange(thumbnailGroup.GetComponentsInChildren<Image>() );
+        thumbnailGroup.SetActive(false);
         instance = this;
 	}
     public void Add_Img( Clue c)
     {
+        thumbnailGroup.SetActive(true);
         clueThumbnails[num_clues].sprite = c.thumbnail;
         clueThumbnails[num_clues].gameObject.SetActive(true);
-        currClue.SetActive(false);
+        c.gameObject.SetActive(false);
         num_clues++;
     }
 

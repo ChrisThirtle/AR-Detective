@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38074008, b: 0.35872707, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -164,7 +164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &109778455
 RectTransform:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296948909}
+      - m_Target: {fileID: 0}
         m_MethodName: Pop_Prefab
         m_Mode: 3
         m_Arguments:
@@ -393,7 +393,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 296948908}
-  - component: {fileID: 296948909}
   m_Layer: 5
   m_Name: Thumbnails
   m_TagString: Untagged
@@ -427,20 +426,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &296948909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 296948907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f8a455ed3e0a554093ce5fb29c54669, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item_cnvs: {fileID: 836614813}
-  prefab_cam: {fileID: 304099717}
-  invDescription: {fileID: 2074352866}
 --- !u!1 &304099717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &801004752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1723,7 +1708,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296948909}
+      - m_Target: {fileID: 0}
         m_MethodName: Pop_Prefab
         m_Mode: 3
         m_Arguments:
@@ -2545,7 +2530,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296948909}
+      - m_Target: {fileID: 0}
         m_MethodName: Pop_Prefab
         m_Mode: 3
         m_Arguments:
@@ -2586,7 +2571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1030539044
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2678,7 +2663,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296948909}
+      - m_Target: {fileID: 0}
         m_MethodName: Pop_Prefab
         m_Mode: 3
         m_Arguments:
@@ -2799,7 +2784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1269994915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2891,7 +2876,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296948909}
+      - m_Target: {fileID: 0}
         m_MethodName: Pop_Prefab
         m_Mode: 3
         m_Arguments:
@@ -3160,7 +3145,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296948909}
+      - m_Target: {fileID: 0}
         m_MethodName: BackToImgCanvas
         m_Mode: 1
         m_Arguments:
@@ -3401,7 +3386,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 582663838}
   m_HandleRect: {fileID: 582663837}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3460,7 +3445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1617536966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3552,7 +3537,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296948909}
+      - m_Target: {fileID: 0}
         m_MethodName: Pop_Prefab
         m_Mode: 3
         m_Arguments:
@@ -3593,7 +3578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1669942591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3685,7 +3670,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296948909}
+      - m_Target: {fileID: 0}
         m_MethodName: Pop_Prefab
         m_Mode: 3
         m_Arguments:
@@ -4082,6 +4067,7 @@ GameObject:
   - component: {fileID: 1776364362}
   - component: {fileID: 1776364361}
   - component: {fileID: 1776364360}
+  - component: {fileID: 1776364363}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -4134,6 +4120,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1776364363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1776364359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8a455ed3e0a554093ce5fb29c54669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_cnvs: {fileID: 836614813}
+  prefab_cam: {fileID: 304099717}
+  invDescription: {fileID: 2074352866}
+  thumbnailGroup: {fileID: 296948907}
 --- !u!1 &1843072834
 GameObject:
   m_ObjectHideFlags: 0
@@ -4380,7 +4381,7 @@ MonoBehaviour:
   scrollImg: {fileID: 1989187139}
   textTarget: {fileID: 1989187141}
   scroller: {fileID: 408938517}
-  scrollSpeed: 1
+  scrollSpeed: 20
   other_canvas: {fileID: 992366183}
   ARCam: {fileID: 944167042}
 --- !u!114 &1989187141
@@ -4802,7 +4803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2141887323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4894,7 +4895,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296948909}
+      - m_Target: {fileID: 0}
         m_MethodName: Pop_Prefab
         m_Mode: 3
         m_Arguments:
