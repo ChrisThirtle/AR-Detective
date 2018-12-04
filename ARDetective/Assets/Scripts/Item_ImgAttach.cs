@@ -13,7 +13,7 @@ public class Item_ImgAttach : MonoBehaviour {
 	public Text invDescription;
     public static Item_ImgAttach instance;
 	
-    void Start()
+    void Awake()
     {
         clueThumbnails.AddRange(GetComponentsInChildren<Image>() );
         instance = this;
@@ -23,7 +23,7 @@ public class Item_ImgAttach : MonoBehaviour {
         clueThumbnails[num_clues].sprite = c.thumbnail;
         clueThumbnails[num_clues].gameObject.SetActive(true);
         currClue.SetActive(false);
-
+        num_clues++;
     }
 
     public void Pop_Prefab(int index)

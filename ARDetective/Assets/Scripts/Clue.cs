@@ -27,22 +27,9 @@ public class Clue : MonoBehaviour {
 	
     void OnMouseDown()
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (hit.collider != null)
-            {
-                hit.collider.enabled = false;
-				// transform hiding place into object item
-				if (!GlobalVars.Instance.inInventory)
-				{
-					GlobalVars.Instance.CollectedClues.Add(this.gameObject);
-					this.gameObject.SetActive(false);
-				}
-            }
-        }
+        print("clicked clue:" + name);//debug
+        GlobalVars.Instance.CollectedClues.Add(this.gameObject);
         Item_ImgAttach.instance.Add_Img(this);
+        this.gameObject.SetActive(false);
     }
 }

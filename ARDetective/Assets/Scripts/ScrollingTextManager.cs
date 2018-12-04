@@ -27,7 +27,7 @@ public class ScrollingTextManager : MonoBehaviour
 	}
 	void Update()
 	{
-		scroller.velocity = new Vector2(100f, 100f);
+		scroller.velocity = new Vector2(0f, 10f*scrollSpeed);
 		if (scrollImg.localPosition.y > textTarget.bounds.size.y)
 		{
 			StartCoroutine("EndCutScene");

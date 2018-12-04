@@ -6,7 +6,7 @@ using Vuforia;
 public class ClueHider : MonoBehaviour, ITrackableEventHandler{
 	static System.Random rand = new System.Random();
 
-	bool cluesPlaced = false;
+	bool canPlace = false;
 
 	List<GameObject> hidingObjects = new List<GameObject>();
 	List<GameObject> clueObjects = new List<GameObject>();
@@ -17,7 +17,7 @@ public class ClueHider : MonoBehaviour, ITrackableEventHandler{
 	// Update is called once per frame
 	public void placeContent()
     {
-        if (hidingplacesPlaced < 4)
+        if (canPlace && hidingplacesPlaced < 4)
         {
             GameObject randHidingPlace = GameObject.Instantiate(hidingObjects[rand.Next(hidingObjects.Count - 1)]);
             HidingPlace rhp = randHidingPlace.AddComponent<HidingPlace>();
@@ -68,6 +68,7 @@ public class ClueHider : MonoBehaviour, ITrackableEventHandler{
 
         m_PreviousStatus = previousStatus;
         m_NewStatus = newStatus;
+        canPlace = m_NewStatus == TrackableBehaviour.Status.EXTENDED_TRACKED || m_NewStatus == TrackableBehaviour.Status.TRACKED;
         switch (newStatus)
         {
             case TrackableBehaviour.Status.DETECTED:
