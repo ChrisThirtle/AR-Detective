@@ -17,7 +17,7 @@ public class ClueHider : MonoBehaviour, ITrackableEventHandler{
 	// Update is called once per frame
 	public void placeContent()
     {
-        if (canPlace && hidingplacesPlaced < 4)
+        if (hidingplacesPlaced < 4)
         {
             GameObject randHidingPlace = GameObject.Instantiate(hidingObjects[rand.Next(hidingObjects.Count - 1)]);
             HidingPlace rhp = randHidingPlace.AddComponent<HidingPlace>();
