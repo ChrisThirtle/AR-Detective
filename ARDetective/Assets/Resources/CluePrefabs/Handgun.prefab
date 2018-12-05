@@ -477,4 +477,5 @@ MonoBehaviour:
   weight: 0
   description: A murder weapon, obviously. Fingerprints were wiped off the stock.
     Records say it belonged to {1}.
+  question: Who owned the gun?
   thumbnail: {fileID: 21300000, guid: 3701015b69d092a4b857d809d0746482, type: 3}

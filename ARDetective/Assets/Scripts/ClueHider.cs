@@ -28,11 +28,11 @@ public class ClueHider : MonoBehaviour, ITrackableEventHandler{
             GameObject planeClone = GameObject.Instantiate(this.gameObject);
             randHidingPlace.transform.SetParent(planeClone.transform);
 
-            randHidingPlace.transform.localPosition = new Vector3(0f,-1f,0f);
+            randHidingPlace.transform.localPosition = new Vector3(0f,0f,.3f);
             randHidingPlace.transform.localRotation = Quaternion.identity;
             hidingplacesPlaced++;
         }
-        else
+        else if (GlobalVars.Instance.CollectedClues.Count > 3)
         {
             quizBtn.SetActive(true);
         }

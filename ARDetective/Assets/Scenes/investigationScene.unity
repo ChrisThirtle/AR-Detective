@@ -3108,15 +3108,15 @@ RectTransform:
   m_GameObject: {fileID: 1336947312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 610146988}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -33, y: -33}
+  m_SizeDelta: {x: 34.2, y: 33.3}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1336947314
 MonoBehaviour:
@@ -3398,7 +3398,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 582663838}
   m_HandleRect: {fileID: 582663837}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3864,7 +3864,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1734446448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 304099720}
@@ -4415,7 +4415,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Two days ago, {0} was murdered, here.
+  m_text: 'Two days ago, {0} was murdered here.
 
     Our initial investigation could not locate the murder weapon, but we have managed
     to narrow down our suspects to three people with motive:
@@ -4508,7 +4508,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 421
+    characterCount: 420
     spriteCount: 0
     spaceCount: 77
     wordCount: 75

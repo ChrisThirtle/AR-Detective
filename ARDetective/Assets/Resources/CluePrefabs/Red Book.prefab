@@ -98,4 +98,5 @@ MonoBehaviour:
   weight: 0
   description: There's a sheet of paper slipped into this book. There's a name on
     it, {4}
+  question: Whose name was written in a book
   thumbnail: {fileID: 21300000, guid: 2b26360ac2ccfce43aa002c13e89a10a, type: 3}

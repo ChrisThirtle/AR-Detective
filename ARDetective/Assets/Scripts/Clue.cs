@@ -11,6 +11,7 @@ public class Clue : MonoBehaviour {
     public float weight;
     [Tooltip("Description format string")]//this shows a message when you hover over the variable in Unity Inspector, can double as comments
     public string description;
+    public string question;
     public Sprite thumbnail;
 
 	/*public vars are modifiable in Unity's Inspector window, private vars need to be explicitly marked [SerializeField]

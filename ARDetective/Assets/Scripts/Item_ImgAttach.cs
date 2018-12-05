@@ -37,6 +37,9 @@ public class Item_ImgAttach : MonoBehaviour {
 		{
 			currClue = GlobalVars.Instance.CollectedClues[index];
 			invDescription.text = GlobalVars.nameReplace(currClue.GetComponent<Clue>().description);
+            currClue.transform.SetParent(prefab_cam.transform);
+            currClue.transform.localPosition = new Vector3(0f, 0f, 5f);
+            currClue.SetActive(true);
 		}
 	}
 
@@ -45,6 +48,7 @@ public class Item_ImgAttach : MonoBehaviour {
 		GlobalVars.Instance.inInventory = false;
 		prefab_cam.SetActive(false);
         item_cnvs.SetActive(true);
+        currClue.SetActive(false);
     }
 
 

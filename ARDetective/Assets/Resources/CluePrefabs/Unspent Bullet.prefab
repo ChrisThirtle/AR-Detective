@@ -467,5 +467,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  description: 
+  description: This bullet has a full print from {4}
+  question: Whose print did you find on an unspent bullet?
   thumbnail: {fileID: 21300000, guid: b2a78f7e191877f449c537a48f6ded31, type: 3}

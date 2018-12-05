@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Vuforia;
+using UnityEngine.SceneManagement;
 
 public class ScrollingTextManager : MonoBehaviour
 {
@@ -21,10 +22,27 @@ public class ScrollingTextManager : MonoBehaviour
     void Start()
     {
         stepsize = Screen.height*0.01f * scrollSpeed;
-		textTarget.text = GlobalVars.nameReplace(textTarget.text);
 		scroller.verticalScrollbar.value= 0.5f;
+        if (SceneManager.GetActiveScene().name == "Credits")
+        {  
+            AudioSource src = GameObject.FindObjectOfType<AudioSource>();
 
-	}
+            //win
+            if (GlobalVars.Instance.FinalScore > 2.1f)
+            {
+                textTarget.text = "\t<b>VICTORY!</b>\n\n Justice has been served this day. Your evidence has placed {4} behind bars and {0} may now rest in peace.";
+                src.clip = Resources.Load<AudioClip>("Dee_Yan-Key_-_03_-_Vienna_Jazz.mp3");
+            }
+            else//lose
+            {
+                textTarget.text = "\t<b>DEFEAT!</b>\n\n Your conclusions let the real killer, {4}, get away! {0}'s murder case goes forever unsolved...";
+                src.clip = Resources.Load<AudioClip>("Dee_Yan-Key_-_02_-_Unknown_Lovers_Blues.mp3");
+                
+            }
+            src.Play();
+        }
+        textTarget.text = GlobalVars.nameReplace(textTarget.text);
+    }
 	void Update()
 	{
 		scroller.velocity = new Vector2(0f, 10f*scrollSpeed);
@@ -59,7 +77,9 @@ public class ScrollingTextManager : MonoBehaviour
         
     
         CC.SetActive(false);
-        ARCam.SetActive(true);
+
+        if (SceneManager.GetActiveScene().name == "investigationScene") ARCam.SetActive(true);
+        else SceneManager.LoadSceneAsync("Menu");
     }
     // Use this for initialization
 
