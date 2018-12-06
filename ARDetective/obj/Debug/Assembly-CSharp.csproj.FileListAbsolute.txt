@@ -303,7 +303,6 @@ C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEn
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.dll
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SharedInternalsModule.dll
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SpatialTracking.dll
-C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SpriteMaskModule.dll
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SpriteShapeModule.dll
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.StandardEvents.dll
@@ -386,7 +385,6 @@ C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEn
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.ProfilerModule.xml
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.xml
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SharedInternalsModule.xml
-C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SpriteMaskModule.xml
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SpriteShapeModule.xml
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.StreamingModule.xml

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23136804176431804}
   - component: {fileID: 114765504324173484}
   m_Layer: 0
-  m_Name: Smartphone
+  m_Name: smartphone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

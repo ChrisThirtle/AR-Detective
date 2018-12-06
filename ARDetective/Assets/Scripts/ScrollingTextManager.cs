@@ -19,61 +19,72 @@ public class ScrollingTextManager : MonoBehaviour
     private string tempText;
     public GameObject ARCam;
 
+    private Vector2 currVelocity;
     void Start()
     {
         stepsize = Screen.height*0.01f * scrollSpeed;
 		scroller.verticalScrollbar.value= 0.5f;
         if (SceneManager.GetActiveScene().name == "Credits")
-        {  
+        {
+            textTarget.alpha = 0.2f;
+            currVelocity = Vector2.zero;
             AudioSource src = GameObject.FindObjectOfType<AudioSource>();
 
             //win
             if (GlobalVars.Instance.FinalScore > 2.1f)
             {
-                textTarget.text = "\t<b>VICTORY!</b>\n\n Justice has been served this day. Your evidence has placed {4} behind bars and {0} may now rest in peace.";
-                src.clip = Resources.Load<AudioClip>("Dee_Yan-Key_-_03_-_Vienna_Jazz.mp3");
+                textTarget.text = "<b>VICTORY!</b>\n\n Justice has been served this day. Your evidence has placed {4} behind bars and {0} may now rest in peace.";
+                src.clip = Resources.Load<AudioClip>("Dee_Yan-Key_-_03_-_Vienna_Jazz");
+                src.time = 5f;//adjusted playback positions to suit duration of credits
             }
             else//lose
             {
-                textTarget.text = "\t<b>DEFEAT!</b>\n\n Your conclusions let the real killer, {4}, get away! {0}'s murder case goes forever unsolved...";
-                src.clip = Resources.Load<AudioClip>("Dee_Yan-Key_-_02_-_Unknown_Lovers_Blues.mp3");
-                
+                textTarget.text = "<b>DEFEAT!</b>\n\n Your conclusions let the real killer, {4}, get away! The murder of {0} goes forever unsolved...";
+                src.clip = Resources.Load<AudioClip>("Dee_Yan-Key_-_02_-_Unknown_Lovers_Blues");
+                src.time = 2.48f;
             }
-            src.Play();
+            StartCoroutine(playBGMUponLoad(src));
+            StartCoroutine("fadeTextIn");
+        }
+        else
+        {
+            currVelocity = new Vector2(0f, 10f * scrollSpeed);
         }
         textTarget.text = GlobalVars.nameReplace(textTarget.text);
     }
 	void Update()
 	{
-		scroller.velocity = new Vector2(0f, 10f*scrollSpeed);
+        scroller.velocity = currVelocity;
 		if (scrollImg.localPosition.y > textTarget.bounds.size.y)
 		{
 			StartCoroutine("EndCutScene");
 		}
 	}
-	/*
-    private Vector3 target = new Vector3(0f,968f,0f);
-    IEnumerator ScrollUpdate() {
-		
-		
-		while (scrollImg.localPosition.y <= textTarget.bounds.size.y)
+
+    IEnumerator playBGMUponLoad(AudioSource src)
+    {
+        yield return new WaitWhile(() => { return src.clip.loadState == AudioDataLoadState.Loading; });
+        src.Play();
+        currVelocity = new Vector2(0f, 10f * scrollSpeed);
+    }
+
+    IEnumerator fadeTextIn()
+    {
+        while(textTarget.alpha < 1f)
         {
-            scrollImg.transform.localPosition += new Vector3(0f,stepsize*10,0f);
-
-            yield return new WaitForSecondsRealtime(.13f);
+            textTarget.alpha += 0.1f;
+            yield return new WaitForSecondsRealtime(0.2f);
         }
-		StartCoroutine("EndCutScene");
-		
-	}
+    }
 
-	*/
 	IEnumerator EndCutScene()
     {
         yield return new WaitForSecondsRealtime(1.5f);
         GameObject CC = GameObject.Find("Cutscene_Canvas");
         
 
-        other_canvas.SetActive(true);     
+        if(other_canvas != null)
+            other_canvas.SetActive(true);     
         
     
         CC.SetActive(false);
@@ -81,6 +92,5 @@ public class ScrollingTextManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "investigationScene") ARCam.SetActive(true);
         else SceneManager.LoadSceneAsync("Menu");
     }
-    // Use this for initialization
 
 }
