@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
+  weight: 0.324
   description: '{4}''s favorite brand of deodorant. Weird.'
   question: Whose deodorant did you find?
   thumbnail: {fileID: 21300000, guid: 791d9f77444ac514fba63af018b5bc3f, type: 3}

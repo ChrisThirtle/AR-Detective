@@ -38,7 +38,7 @@ public class PopulateQuestion : MonoBehaviour
         // index into shuffled clues and pull that key and get its value from the dictionary
         // Get next clue from collected clue and create a question based on it
 
-        GameObject CurrentClue = GlobalVars.Instance.CollectedClues[ClueIndex];
+        GameObject CurrentClue = GlobalVars.Instance.CollectedClues[ClueIndex].Instantiate();
        // GameObject CurrentClue = ClueList[ClueIndex];
         CurrentQuestion = QG.CreateQuestion(CurrentClue);
         ReshuffleAnswer(CurrentQuestion.Answers);
@@ -52,8 +52,8 @@ public class PopulateQuestion : MonoBehaviour
 
     public void Clicked(Text b)
     {
-        GameObject CurrentClue = GlobalVars.Instance.CollectedClues[ClueIndex];
-        string ClueDescription = CurrentClue.GetComponent<Clue>().description;
+        GameObject CurrentClue = GlobalVars.Instance.CollectedClues[ClueIndex].Instantiate();
+        string ClueDescription = GlobalVars.nameReplace(CurrentClue.GetComponent<Clue>().description );
         //string ClueDescription = "This";
         ClueIndex++;
         if (ClueDescription.Contains(b.text))  //GlobalVars.Instance.suspects[4].fullName)
@@ -64,7 +64,7 @@ public class PopulateQuestion : MonoBehaviour
         {
             AnswerRatings.Add(0.2f);
         }
-
+        print("Answer was '"+ClueDescription+"', answer given was "+b.text);//debug
 
         // Check if all questions asked have been answered
         if (ClueIndex == 4)      //(GlobalVars.Instance.CollectedClues.Count))
@@ -98,7 +98,7 @@ public class PopulateQuestion : MonoBehaviour
             AnswersEvaluation += AnswerRatings[i];
         }
         GlobalVars.Instance.FinalScore = AnswersEvaluation;
-        SceneManager.LoadSceneAsync("Credits");
+        SceneManager.LoadSceneAsync("Credits");//"Credits"
     }
 }
 

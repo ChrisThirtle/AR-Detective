@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
+  weight: 0.5
   description: This is {0}'s journal, last entry says they had a fight with {4} a
     few days ago.
   question: Who did {0} recently get in a fight with?

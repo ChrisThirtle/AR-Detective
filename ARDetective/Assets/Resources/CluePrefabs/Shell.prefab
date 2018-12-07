@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
+  weight: 0.721
   description: There's one partial print from {4} on this shell
   question: Whose print was on the lone casing
   thumbnail: {fileID: 21300000, guid: e61b8fa328497a740b2d456408e665a6, type: 3}

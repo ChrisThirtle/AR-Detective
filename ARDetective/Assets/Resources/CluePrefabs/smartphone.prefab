@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
+  weight: 0.5
   description: A phone, it seems to have been owned by {4}.
   question: Whose phone did you find at the scene
   thumbnail: {fileID: 21300000, guid: 3410cc5c906c74747898f200af4b956b, type: 3}

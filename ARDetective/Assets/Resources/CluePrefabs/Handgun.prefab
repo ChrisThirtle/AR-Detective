@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
+  weight: 0.756
   description: A murder weapon, obviously. Fingerprints were wiped off the stock.
     Records say it belonged to {1}.
   question: Who owned the gun?

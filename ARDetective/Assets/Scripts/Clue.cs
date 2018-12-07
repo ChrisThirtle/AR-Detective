@@ -35,7 +35,7 @@ public class Clue : MonoBehaviour {
 	
     void OnMouseDown()
     {
-        GlobalVars.Instance.CollectedClues.Add(this.gameObject);
+        GlobalVars.Instance.CollectedClues.Add(new GlobalVars.srlzClue(this));
         Item_ImgAttach.instance.Add_Img(this);
         this.gameObject.SetActive(false);
     }

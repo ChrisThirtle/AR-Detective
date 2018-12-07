@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 502953307}
   m_HandleRect: {fileID: 502953306}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1293,7 +1293,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1818412544}
   m_HandleRect: {fileID: 1818412543}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1985,7 +1985,7 @@ MonoBehaviour:
   scrollImg: {fileID: 1613580829}
   textTarget: {fileID: 1613580831}
   scroller: {fileID: 1505157191}
-  scrollSpeed: 1
+  scrollSpeed: 20
   other_canvas: {fileID: 0}
   ARCam: {fileID: 0}
 --- !u!114 &1613580831
@@ -2019,6 +2019,32 @@ MonoBehaviour:
     Reid Del Bello
 
     Chris Thirtle
+
+
+    Main Menu Theme
+
+    Inspector Lazy Fox by Lobo Loco
+
+
+    Investigation Theme
+
+    Trace Hunters Department by Lobo Loco
+
+
+    Victory Theme
+
+    Vienna Jazz by Dee Yan-Key
+
+
+    Defeat Theme
+
+    Unknown Lovers'' Blues by Dee Yan-Key
+
+
+    All music courtesy of
+
+    freemusicarchive.org
+
 
 
     Powered by Unity'

@@ -18,9 +18,57 @@ public sealed class GlobalVars
             return instance;
         }
     }
-	
 
-	private string[] firstNames = {"Edward", "Lenny", "Chris", "Toby", "Evan", "Kevin", "Raphael", "Reid", "Buddy", "Michael", "Regan", "Tristan", "Leighton", "Anya", "Lauren", "Erik", "Renee", "Emmeline", "Cora", "Margot", "Faith", "Amelie", "Paisley"};
+    /// <summary>
+    /// GameObjects wont persist in a static class,
+    /// so save clue info then reinstantiate
+    /// a new object with it.
+    /// </summary>
+    [System.Serializable]
+    public struct srlzClue
+    {
+        public float w;
+        public string name;
+
+        public srlzClue(Clue c)
+        {
+            int parenIndex = c.name.IndexOf("(");//cut the "clone" out of the name
+            name = c.name.Substring(0,parenIndex);
+            w = c.weight;
+        }
+
+        /// <summary>
+        /// if this Serialized Clue is already in scene, return its GO
+        /// else, instantiate and return it.
+        /// </summary>
+        /// <returns>a gameobject containing this srlzClue</returns>
+        public GameObject Instantiate()
+        {
+            GameObject existing = GameObject.Find(name);
+            if (existing == null)
+            {
+                try
+                {
+                    GameObject go = GameObject.Instantiate(Resources.Load<GameObject>("CluePrefabs/" + name));
+                    return go;
+                }
+                catch (ArgumentException)
+                {
+                    Debug.Log("Resources.Load couldnt find "+name+" in CluePrefabs.");
+                    return existing;
+                }
+                
+                
+            }
+            else
+            {
+                return existing;
+            }
+            
+        }
+    }
+
+    private string[] firstNames = {"Edward", "Lenny", "Chris", "Toby", "Evan", "Kevin", "Raphael", "Reid", "Buddy", "Michael", "Regan", "Tristan", "Leighton", "Anya", "Lauren", "Erik", "Renee", "Emmeline", "Cora", "Margot", "Faith", "Amelie", "Paisley"};
     private string[] lastNames = {"Wilkinson", "Baker", "Green", "Porter", "Gray", "Dean", "Adams", "Howard", "Miller", "Murray", "Hughes", "Parker", "Bell", "Webb", "Rees", "Knight", "Reynolds", "Mccarthy"};
 
     public Person victim;
@@ -28,12 +76,13 @@ public sealed class GlobalVars
     public int murdererIndex;
 
 	public bool inInventory = false;
-    public List<GameObject> CollectedClues = new List<GameObject>();
+    public List<srlzClue> CollectedClues = new List<srlzClue>();
 	public int quizScore = 0;
 	public float FinalScore;
 
     public void setupVars()
     {
+        
         System.Random rng = new System.Random();
         //Make sure list of clues is empty
         CollectedClues.RemoveRange(0, CollectedClues.Count);
@@ -60,9 +109,9 @@ public sealed class GlobalVars
 	public static float getClueTotal()
 	{
 		float totalVal = 0;
-		foreach (GameObject clue in Instance.CollectedClues)
+		foreach (srlzClue clue in Instance.CollectedClues)
 		{
-			totalVal += clue.GetComponent<Clue>().weight;
+			totalVal += clue.w;
 		}
 		return totalVal;
 	}

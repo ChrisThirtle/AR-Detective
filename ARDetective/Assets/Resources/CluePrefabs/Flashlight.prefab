@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
+  weight: 0.5
   description: This flashlight has some of {4}'s fingerprints on it. Ominous.
   question: Who touched the flashlight?
   thumbnail: {fileID: 21300000, guid: d2fb9411adf915d4c9273e6ab459a389, type: 3}

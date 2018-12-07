@@ -35,7 +35,7 @@ public class QuestionsGenerator
         //ans4.AnswerString = "Up";
         //ans4.Rating = 0.1f;
 
-        question.QuestionStr = GlobalVars.nameReplace(clue.GetComponent<Clue>().question);
+        question.QuestionStr = GlobalVars.nameReplace(clue.GetComponent<Clue>().question);//nre
             
         question.Answers[0] = ans1;
         question.Answers[1] = ans2;

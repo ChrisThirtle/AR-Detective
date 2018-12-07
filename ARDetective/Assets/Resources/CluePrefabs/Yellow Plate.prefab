@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
+  weight: 0.183
   description: Food stains, fingerprints from {4}
   question: Who used the plates?
   thumbnail: {fileID: 21300000, guid: 9afd60d10b4682248ba163724d8d6f1a, type: 3}

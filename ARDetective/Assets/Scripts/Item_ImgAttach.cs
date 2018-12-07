@@ -35,10 +35,10 @@ public class Item_ImgAttach : MonoBehaviour {
         prefab_cam.SetActive(true);
 		if (index < GlobalVars.Instance.CollectedClues.Count)
 		{
-			currClue = GlobalVars.Instance.CollectedClues[index];
+			currClue = GlobalVars.Instance.CollectedClues[index].Instantiate();
 			invDescription.text = GlobalVars.nameReplace(currClue.GetComponent<Clue>().description);
-            currClue.transform.SetParent(prefab_cam.transform);
-            currClue.transform.localPosition = new Vector3(0f, 0f, 5f);
+            currClue.transform.SetParent(GameObject.Find("ARCamera").transform);
+            currClue.transform.localPosition = new Vector3(0f, 0f, 1f);
             currClue.SetActive(true);
 		}
 	}

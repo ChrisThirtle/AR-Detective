@@ -428,3 +428,5 @@ C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\obj\Debug\Assembly-CSh
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\obj\Debug\Assembly-CSharp.dll
 C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\obj\Debug\Assembly-CSharp.pdb
+C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+C:\Users\kevin\Documents\2018fall\ARDetective\ARDetective\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml

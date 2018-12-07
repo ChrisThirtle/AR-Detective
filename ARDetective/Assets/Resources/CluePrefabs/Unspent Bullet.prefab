@@ -74,7 +74,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 420956}
-  - component: {fileID: 20541734}
   - component: {fileID: 114235308818346096}
   m_Layer: 0
   m_Name: Unspent Bullet
@@ -418,32 +417,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!205 &20541734
-LODGroup:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 158912}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.000000023748726, y: 0.015589867, z: 0.0000000018626451}
-  m_Size: 0.031138279
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LODs:
-  - screenRelativeHeight: 0.29758298
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2349882}
-    - renderer: {fileID: 2330154}
-  - screenRelativeHeight: 0.0011481068
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2353464}
-    - renderer: {fileID: 2341804}
-  - screenRelativeHeight: 0.0003378187
-    fadeTransitionWidth: 0
-    renderers: []
-  m_Enabled: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -466,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
+  weight: 0.5
   description: This bullet has a full print from {4}
   question: Whose print did you find on an unspent bullet?
   thumbnail: {fileID: 21300000, guid: b2a78f7e191877f449c537a48f6ded31, type: 3}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38074008, b: 0.35872707, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -435,7 +435,6 @@ GameObject:
   m_Component:
   - component: {fileID: 304099720}
   - component: {fileID: 304099719}
-  - component: {fileID: 304099718}
   m_Layer: 0
   m_Name: prefab_camera
   m_TagString: Untagged
@@ -443,13 +442,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!81 &304099718
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 304099717}
-  m_Enabled: 1
 --- !u!20 &304099719
 Camera:
   m_ObjectHideFlags: 0
@@ -459,7 +451,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 1}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -503,7 +495,7 @@ Transform:
   - {fileID: 610146988}
   - {fileID: 1734446449}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &312741137
 GameObject:
@@ -2249,7 +2241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &944167048
 MonoBehaviour:
@@ -3398,7 +3390,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 582663838}
   m_HandleRect: {fileID: 582663837}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4393,7 +4385,7 @@ MonoBehaviour:
   scrollImg: {fileID: 1989187139}
   textTarget: {fileID: 1989187141}
   scroller: {fileID: 408938517}
-  scrollSpeed: 20
+  scrollSpeed: 15
   other_canvas: {fileID: 992366183}
   ARCam: {fileID: 944167042}
 --- !u!114 &1989187141

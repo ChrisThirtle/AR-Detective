@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2383934}
   - component: {fileID: 114910593218801410}
   m_Layer: 0
-  m_Name: Tanta
+  m_Name: Tanto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507be464fc2776a45b61be8b206f0240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
+  weight: 0.66
   description: A pretty plain knife. Belongs to {2}. Has some fingerprints from {4}
     on the handle.
   question: Who owned the plain knife?

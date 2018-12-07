@@ -38,7 +38,6 @@ public class ClueHider : MonoBehaviour, ITrackableEventHandler{
         }
     }
 
-
     protected TrackableBehaviour mTrackableBehaviour;
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;

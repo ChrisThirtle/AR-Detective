@@ -36,14 +36,21 @@ public class ScrollingTextManager : MonoBehaviour
                 textTarget.text = "<b>VICTORY!</b>\n\n Justice has been served this day. Your evidence has placed {4} behind bars and {0} may now rest in peace.";
                 src.clip = Resources.Load<AudioClip>("Dee_Yan-Key_-_03_-_Vienna_Jazz");
                 src.time = 5f;//adjusted playback positions to suit duration of credits
+                StartCoroutine(playBGMUponLoad(src));
+            }
+            else if (other_canvas == null)
+            {
+                currVelocity = new Vector2(0f, 10f * scrollSpeed);
             }
             else//lose
             {
                 textTarget.text = "<b>DEFEAT!</b>\n\n Your conclusions let the real killer, {4}, get away! The murder of {0} goes forever unsolved...";
                 src.clip = Resources.Load<AudioClip>("Dee_Yan-Key_-_02_-_Unknown_Lovers_Blues");
                 src.time = 2.48f;
+                StartCoroutine(playBGMUponLoad(src));
             }
-            StartCoroutine(playBGMUponLoad(src));
+            print("score was " + GlobalVars.Instance.FinalScore );
+            
             StartCoroutine("fadeTextIn");
         }
         else
@@ -84,13 +91,14 @@ public class ScrollingTextManager : MonoBehaviour
         
 
         if(other_canvas != null)
-            other_canvas.SetActive(true);     
-        
-    
-        CC.SetActive(false);
+            other_canvas.SetActive(true);
+
+        if (CC != null)
+            CC.SetActive(false);
 
         if (SceneManager.GetActiveScene().name == "investigationScene") ARCam.SetActive(true);
-        else SceneManager.LoadSceneAsync("Menu");
+        else if(other_canvas == null)
+            SceneManager.LoadSceneAsync("Menu");
     }
 
 }
